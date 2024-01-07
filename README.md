@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+Ushbu loyiha [Create React App] (https://github.com/facebook/create-react-app) bilan yuklangan.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Mavjud skriptlar
 
-## Available Scripts
-
-In the project directory, you can run:
+Loyiha katalogida siz quyidagilarni bajarishingiz mumkin:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ilovani ishlab chiqish rejimida ishga tushiradi.\
+Uni brauzeringizda ko‘rish uchun [http://localhost:3000](http://localhost:3000) oching.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Oʻzgartirish kiritganingizda sahifa qayta yuklanadi.\
+Konsolda har qanday lint xatolarini ham ko'rishingiz mumkin.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sinov dasturini interaktiv tomosha rejimida ishga tushiradi.\
+Qoʻshimcha maʼlumot olish uchun [ishlayotgan testlar](https://facebook.github.io/create-react-app/docs/running-tests) haqidagi boʻlimga qarang.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ilovani ishlab chiqarish uchun "build" jildiga quradi.\
+U ishlab chiqarish rejimida React-ni to'g'ri to'playdi va eng yaxshi ishlash uchun qurilishni optimallashtiradi.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Qurilish kichiklashtirilgan va fayl nomlari xeshlarni o'z ichiga oladi.\
+Ilovangiz foydalanishga tayyor!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Qoʻshimcha maʼlumot olish uchun [deployment](https://facebook.github.io/create-react-app/docs/deployment) haqidagi boʻlimga qarang.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Izoh: bu bir tomonlama operatsiya. Bir marta “tashqariga” qaytsangiz, orqaga qaytolmaysiz!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Qurilish vositasi va konfiguratsiya tanlovlari sizni qoniqtirmasa, istalgan vaqtda “chiqarish”ingiz mumkin. Ushbu buyruq loyihangizdan yagona qurilishga bog'liqlikni olib tashlaydi.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Buning o'rniga, u barcha konfiguratsiya fayllari va o'tishga bog'liqliklarni (veb-paket, Babel, ESLint va boshqalar) to'g'ridan-to'g'ri loyihangizga ko'chiradi, shunda siz ularni to'liq nazorat qilasiz. “O‘chirish” buyrug‘idan tashqari barcha buyruqlar ishlayveradi, lekin ular nusxa ko‘chirilgan skriptlarga ishora qiladi, shunda siz ularni o‘zgartirishingiz mumkin. Bu vaqtda siz yolg'izsiz.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Siz hech qachon "eject" dan foydalanmasligingiz kerak. Tanlangan funksiyalar toʻplami kichik va oʻrta ilovalar uchun mos keladi va siz bu xususiyatdan foydalanish majburiyatini his qilmasligingiz kerak. Ammo biz tushunamizki, agar siz bunga tayyor bo'lganingizda uni moslashtira olmasangiz, bu vosita foydali bo'lmaydi.
