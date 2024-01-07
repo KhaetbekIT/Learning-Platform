@@ -1,4 +1,4 @@
-Ushbu loyiha [Create React App] (https://github.com/facebook/create-react-app) bilan yuklangan.
+Ushbu loyiha [Create React App](https://github.com/facebook/create-react-app) bilan yuklangan.
 
 ## Mavjud skriptlar
 
