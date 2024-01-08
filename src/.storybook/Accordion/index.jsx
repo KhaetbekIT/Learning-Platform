@@ -16,7 +16,7 @@ const Accordion = ({
 
   return (
     <Fragment>
-      <Tag className={classes} disabled={disabled}>
+      <Tag className={classes} disabled={disabled} {...props}>
         {children}
       </Tag>
     </Fragment>
