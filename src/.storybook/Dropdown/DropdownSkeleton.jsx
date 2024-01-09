@@ -6,16 +6,16 @@ const DropdownSkeleton = ({
     size,
     ...props
 }) => {
-    return(
+    return (
         <Fragment>
-            <div 
-            className={className}
-            size={size}
-            {...props}
+            <div
+                className={className}
+                size={size}
+                {...props}
             >
             </div>
         </Fragment>
     )
 }
 
-export {DropdownSkeleton}
+export { DropdownSkeleton }
