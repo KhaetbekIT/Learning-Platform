@@ -9,9 +9,9 @@ const FormLabel = ({
 }) => {
     return (
         <Fragment>
-            <div className={className} id={id} {...props}>
+            <label className={className} id={id} {...props}>
                 {children}
-            </div>
+            </label>
         </Fragment>
     )
 }
