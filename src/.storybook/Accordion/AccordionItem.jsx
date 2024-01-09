@@ -43,7 +43,7 @@ AccordionItem.propTypes = {
 
 AccordionItem.defaultProps = {
   className: "",
-  open: false,
+  open: true,
   title: "Title",
   children: "Accordion Item text or node elements",
 };
