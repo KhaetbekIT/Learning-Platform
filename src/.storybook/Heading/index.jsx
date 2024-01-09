@@ -4,20 +4,27 @@ import propTypes from "prop-types";
 const Heading = ({
     children,
     className,
+    as,
     ...props
 }) => {
+    const Heading = as
     return (
         <Fragment>
-            <div className={className} {...props}>
+            <Heading className={className} {...props}>
                 {children}
-            </div>
+            </Heading>
         </Fragment>
     )
 }
 
 Heading.propTypes = {
     children: propTypes.node,
-    className: propTypes.string
+    className: propTypes.string,
+    as: propTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]).isRequired
+}
+
+Heading.defaultProps = {
+    as: "h2"
 }
 
 export default Heading;
