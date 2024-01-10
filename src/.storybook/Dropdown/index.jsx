@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import propTypes from "prop-types";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 const Dropdown = ({
   arialabel,
@@ -30,7 +30,13 @@ const Dropdown = ({
   children,
   ...props
 }) => {
+  const [open, setOpen] = useState(false);
+
   const classes = classnames([className, `media__${size}`, "dropdown"]);
+
+  const openDropdown = () => {
+    setOpen(!open);
+  };
 
   const item = items.map(({ ...option }, i) => (
     <Fragment key={i}>
@@ -39,9 +45,9 @@ const Dropdown = ({
   ));
 
   return (
-    <div className={classes} id={id} onClick={() => console.log("dropdown")}>
+    <div className={classes} id={id} onClick={openDropdown}>
       <button type={type}>{initialSelectedItem}</button>
-      <ul hidden={false}>{item}</ul>
+      <ul hidden={!open}>{item}</ul>
     </div>
   );
 };
