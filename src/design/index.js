@@ -19,7 +19,7 @@ const Design = () => {
         </AccordionItem>
       </Accordion>
 
-      <Dropdown items={[{ name: 1 }, { name: 1 }, { name: 1 }, { name: 1 }]} />
+      <Dropdown items={[{ name: 1 }, { name: 2 }, { name: 3 }, { name: 5 }]} initialSelectedItem={["Open"]} />
     </Fragment>
   );
 };
