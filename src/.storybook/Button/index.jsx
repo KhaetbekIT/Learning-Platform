@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Fragment } from "react";
 import propTypes from "prop-types";
 
-const Button = ([
+const Button = ({
     as,
     children,
     className,
@@ -27,7 +27,7 @@ const Button = ([
     tooltipPosition,
     type,
     ...props
-]) => {
+}) => {
     const Tag = as;
     const
         classes = classNames
