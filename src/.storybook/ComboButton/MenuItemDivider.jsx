@@ -1,15 +1,17 @@
-import { Fragment } from "react"
+import { Fragment } from "react";
+import propTypes from "prop-types";
 
-const MenuItemDivider = ({
-    className,
-    ...props
-}) => {
-    return (
-        <Fragment>
-            <div className={className} {...props}
-            ></div>
-        </Fragment>
-    )
-}
 
-export {MenuItemDivider}
+const MenuItemDivider = ({ className, ...props }) => {
+  return (
+    <Fragment>
+      <div className={className} {...props}></div>
+    </Fragment>
+  );
+};
+
+MenuItemDivider.propTypes = {
+  className: propTypes.string,
+};
+
+export { MenuItemDivider };

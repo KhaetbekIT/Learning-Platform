@@ -1,4 +1,6 @@
 import { Fragment } from "react";
+import propTypes from "prop-types";
+
 
 const ContainedListItem = ({
   action,
@@ -17,5 +19,13 @@ const ContainedListItem = ({
     </Fragment>
   );
 };
+
+ContainedListItem.prototype = {
+  action: propTypes.node,
+  children: propTypes.node,
+  className: propTypes.string,
+  disabled: propTypes.bool,
+};
+
 
 export { ContainedListItem };

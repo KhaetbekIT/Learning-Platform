@@ -12,11 +12,11 @@ const CopyButton = ({
   children,
   ...props
 }) => {
-  const classes = classnames([className, `media__${size}`, "ContainedList"]);
+  const classes = classnames([className, "CopyButton"]);
   return (
     <div className={classes} onClick={onClick} {...props}>
       <button type="buttom"> {align} </button>
-      <div> {children} </div>
+      <div className="CopyButton_wrap"> {children} </div>
     </div>
   );
 };
