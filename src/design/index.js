@@ -3,6 +3,9 @@ import Accordion from "../.storybook/Accordion";
 import { AccordionItem } from "../.storybook/Accordion/AccordionItem";
 import Dropdown from "../.storybook/Dropdown";
 import Form from "../.storybook/Form";
+import FormLabel from "../.storybook/FormLabel";
+import Heading from "../.storybook/Heading";
+import { HeadingSection } from "../.storybook/Heading/HeadingSection";
 
 const Design = () => {
   const [isOpen, setOpen] = useState(true);
@@ -28,6 +31,41 @@ const Design = () => {
         <input type="password" placeholder="password" required />
         <button>send</button>
       </Form>
+
+      <FormLabel className="FormLabel" id="lebel">
+        From Lebel
+      </FormLabel>
+
+      <Heading as={"h1"}>
+        <HeadingSection className="h1">
+          h1
+        </HeadingSection>
+      </Heading>
+      <Heading>
+        <HeadingSection className="h2">
+          h2
+        </HeadingSection>
+      </Heading>
+      <Heading as={"h3"}>
+        <HeadingSection className="h3">
+          h3
+        </HeadingSection>
+      </Heading>
+      <Heading as={"h4"}>
+        <HeadingSection className="h4">
+          h4
+        </HeadingSection>
+      </Heading>
+      <Heading as={"h5"}>
+        <HeadingSection className="h5">
+          h5
+        </HeadingSection>
+      </Heading>
+      <Heading as={"h6"}>
+        <HeadingSection className="h6">
+          h6
+        </HeadingSection>
+      </Heading>
     </Fragment>
   );
 };
