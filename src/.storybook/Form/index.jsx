@@ -8,14 +8,14 @@ const Form = ({
 }) => {
     return (
         <Fragment>
-            <div className={className} {...props}>
+            <form className={className} {...props}>
                 {children}
-            </div>
+            </form>
         </Fragment>
     )
 }
 
-From.propTypes = {
+Form.propTypes = {
     children: propTypes.node,
     className: propTypes.string,
 }
