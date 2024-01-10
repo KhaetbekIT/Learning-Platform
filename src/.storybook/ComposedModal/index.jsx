@@ -1,10 +1,8 @@
 import propTypes from "prop-types";
+import classnames from "classnames";
 
 const ComposedModal = ({
-  aria_label,
   aria_labelledby,
-  children,
-  className,
   containerClassName,
   danger,
   isFullWidth,
@@ -57,10 +55,7 @@ const ComposedModal = ({
 };
 
 ComposedModal.prototype = {
-  aria_label: propTypes.string, 
   aria_labelledby: propTypes.string,
-  children: propTypes.node,
-  className: propTypes.string,
   containerClassName: propTypes.string,
   danger: propTypes.bool,
   isFullWidth: propTypes.bool,

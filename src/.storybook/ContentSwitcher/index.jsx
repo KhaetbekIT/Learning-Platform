@@ -1,35 +1,28 @@
 import propTypes from "prop-types";
+import classnames from "classnames";
 
 const ContentSwitcher = ({
-  children,
-  className,
   onChange,
   selectedIndex,
   selectionMode,
   size,
   align,
-  disabled,
   enterDelayMs,
-  index,
   leaveDelayMs,
-  name,
-  onClick,
-  onKeyDown,
-  selected,
-  text,
   ...props
 }) => {
-  const classes = classnames([className, `media__${size}`, "ContainedList"]);
+  const classes = classnames([className, `media__${size}`, "ContentSwitcher"]);
   return (
     <div className={classes} disabled={disabled} onClick={onClick} {...props}>
-      <div onChange={onChange}> {name} </div>
+      <div className="ContentSwitcher_name" onChange={onChange}>
+        {name}
+      </div>
+      <div className="ContentSwitcher_wrap"> {children} </div>
     </div>
   );
 };
 
 ContentSwitcher.prototype = {
-  children: propTypes.node,
-  className: propTypes.string,
   onChange: propTypes.func,
   selectedIndex: propTypes.number,
   selectionMode: propTypes.oneOf(["automatic", "manual"]),
@@ -44,15 +37,9 @@ ContentSwitcher.prototype = {
     "left",
     "right",
   ]),
-  disabled: propTypes.bool,
+
   enterDelayMs: propTypes.number,
-  index: propTypes.number,
   leaveDelayMs: propTypes.number,
-  name: propTypes.oneOf(["string", "number"]),
-  onClick: propTypes.func,
-  onKeyDown: propTypes.func,
-  selected: propTypes.bool,
-  text: propTypes.string,
 };
 
 export default ContentSwitcher;

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import propTypes from "prop-types";
 
 
 const ModalBody = ({
@@ -6,16 +7,25 @@ const ModalBody = ({
   children,
   className,
   hasForm,
-    hasScrollingContent,
+  hasScrollingContent,
   ...props
 }) => {
-    return (
-        <Fragment>
-            <div className={className} {...props}  >
-
-            </div>
-        </Fragment>
-    )
+  return (
+    <Fragment>
+      <div className={className} {...props}>
+        {children}
+      </div>
+    </Fragment>
+  );
 };
 
-export {ModalBody}
+
+ModalBody.prototype = {
+  aria_label: propTypes.string,
+  children: propTypes.node,
+  className: propTypes.string,
+  hasForm: propTypes.bool,
+  hasScrollingContent: propTypes.bool,
+};
+
+export { ModalBody };
