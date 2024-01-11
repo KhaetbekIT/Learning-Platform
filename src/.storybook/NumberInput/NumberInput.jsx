@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import propTypes from "prop-types";
+import classnames from "classnames";
 
 const NumberInput = ({
   allowEmpty,
@@ -31,6 +32,8 @@ const NumberInput = ({
   warnText,
   ...props
 }) => {
+const classes = classnames([className, `media__${size}`, "NumberInput"]);
+
   return (
     <Fragment>
       <div className={className} {...props}>
