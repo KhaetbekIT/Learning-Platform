@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import propTypes from "prop-types";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 const ErrorBoundary = ({
     children,
@@ -8,19 +8,28 @@ const ErrorBoundary = ({
     className,
     ...props
 }) => {
-    const classes = classNames([className,], "ErrorBoundary")
+    const classes = classNames([className], "ErrorBoundary");
+
+    const [shouldThrowError, setShouldThrowError] = useState(false);
+
+    function onClick() {
+        setShouldThrowError(!shouldThrowError);
+    }
 
     return (
         <Fragment>
-            <div className={classes}>
+            <button className={classes} onClick={onClick} {...props}>
                 {children}
-            </div>
+            </button>
+            {shouldThrowError ? <p>Whoops</p> : <p>Successfully rendered</p>}
         </Fragment>
-    )
-}
+    );
+};
 
 ErrorBoundary.propTypes = {
     children: propTypes.node,
     fallback: propTypes.node,
     className: propTypes.string
-}
+};
+
+export default ErrorBoundary;
