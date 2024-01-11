@@ -1,4 +1,4 @@
-import { Children, Fragment, useState } from "react";
+import { Fragment, useState } from "react";
 import Accordion from "../.storybook/Accordion";
 import { AccordionItem } from "../.storybook/Accordion/AccordionItem";
 import Dropdown from "../.storybook/Dropdown";
@@ -6,6 +6,7 @@ import Form from "../.storybook/Form";
 import FormLabel from "../.storybook/FormLabel";
 import Heading from "../.storybook/Heading";
 import { HeadingSection } from "../.storybook/Heading/HeadingSection";
+import ErrorBoundary from "../.storybook/ErrorBoundary";
 
 const Design = () => {
   const [isOpen, setOpen] = useState(true);
@@ -66,6 +67,10 @@ const Design = () => {
           h6
         </HeadingSection>
       </Heading>
+
+      <ErrorBoundary fallback="An error occurred.">
+        Toggle throwing error
+      </ErrorBoundary>
     </Fragment>
   );
 };
