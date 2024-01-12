@@ -32,7 +32,7 @@ const OverflowMenu = ({
   const classes = classnames([className, `media__${size}`, "OverflowMenu"]);
   return (
     <Fragment>
-      <div className={className} {...props}>
+      <div className={classes} {...props}>
         <div className="OverflowMenu_wrap"> {children} </div>
       </div>
     </Fragment>
