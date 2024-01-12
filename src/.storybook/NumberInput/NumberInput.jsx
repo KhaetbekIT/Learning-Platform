@@ -36,7 +36,7 @@ const classes = classnames([className, `media__${size}`, "NumberInput"]);
 
   return (
     <Fragment>
-      <div className={className} {...props}>
+      <div className={classes} {...props}>
         <label className="NumberInput_wrap">{children}</label>
       </div>
     </Fragment>

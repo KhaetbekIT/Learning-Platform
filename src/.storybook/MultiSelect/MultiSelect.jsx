@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import propTypes from "prop-types";
+import classnames from "classnames";
 
 const MultiSelect = ({
   className,
@@ -38,9 +39,10 @@ const MultiSelect = ({
   warnText,
   ...props
 }) => {
+  const classes = classnames([className, `media__${size}`, "MultiSelect"]);
   return (
     <Fragment>
-      <div className={className} {...props}>
+      <div className={classes} {...props}>
         {children}
       </div>
     </Fragment>
