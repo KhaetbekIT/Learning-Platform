@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Loading = ({
     active,
@@ -30,13 +30,13 @@ const Loading = ({
     )
 }
 
-Loading.propsTypes = {
-    active: propsTypes.bool,
-    className: propsTypes.string,
-    description: propsTypes.string,
-    id: propsTypes.bool,
-    small: propsTypes.bool,
-    withOverlay: propsTypes.bool,
+Loading.propTypes = {
+    active: propTypes.bool,
+    className: propTypes.string,
+    description: propTypes.string,
+    id: propTypes.bool,
+    small: propTypes.bool,
+    withOverlay: propTypes.bool,
 }
 Loading.defaultProps = {
     active: true,

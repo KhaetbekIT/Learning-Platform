@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const CheckboxSkeleton = ({
     className,
@@ -25,8 +25,8 @@ const CheckboxSkeleton = ({
     )
 }
 
-CheckboxSkeleton.propsTypes = {
-    className: propsTypes.string,
+CheckboxSkeleton.propTypes = {
+    className: propTypes.string,
 }
 
 export default { CheckboxSkeleton };

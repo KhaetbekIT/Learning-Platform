@@ -1,8 +1,9 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from "prop-types";
+import propTypes from "prop-types";
 
 const ClassPrefix = ({
+
     children,
     prefix,
     ...props
@@ -26,9 +27,9 @@ const ClassPrefix = ({
     )
 }
 
-ClassPrefix.propsTypes = {
-    children: propsTypes.node,
-    prefix: propsTypes.string,
+ClassPrefix.propTypes = {
+    children: propTypes.node,
+    prefix: propTypes.string,
 }
 
 export default ClassPrefix;

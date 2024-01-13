@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const MenuItemGroup = ({
     children,
@@ -24,10 +24,10 @@ const MenuItemGroup = ({
         </Fragment>
     )
 }
-MenuItemGroup.propsTypes = {
-    children: propsTypes.node,
-    className: propsTypes.string,
-    label: propsTypes.string,
+MenuItemGroup.propTypes = {
+    children: propTypes.node,
+    className: propTypes.string,
+    label: propTypes.string,
 }
 
 export default { MenuItemGroup }

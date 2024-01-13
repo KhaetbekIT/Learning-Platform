@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const InlineLoading = ({
     className,
@@ -28,19 +28,19 @@ const InlineLoading = ({
     )
 }
 
-InlineLoading.propsTypes = {
-    className: propsTypes.string,
-    description: propsTypes.node,
-    iconDescription: propsTypes.string,
-    onSuccess: propsTypes.bool,
-    status: propsTypes.oneOf
+InlineLoading.propTypes = {
+    className: propTypes.string,
+    description: propTypes.node,
+    iconDescription: propTypes.string,
+    onSuccess: propTypes.bool,
+    status: propTypes.oneOf
         ([
             'inactive',
             'active',
             'finished',
             'error',
         ]).isRequired,
-    successDelay: propsTypes.number,
+    successDelay: propTypes.number,
 }
 
 InlineLoading.defaultProps = {

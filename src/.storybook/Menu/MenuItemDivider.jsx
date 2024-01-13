@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const MenuItemDivider = ({
     className,
@@ -22,8 +22,8 @@ const MenuItemDivider = ({
         </Fragment>
     )
 }
-MenuItemDivider.propsTypes = {
-    className: propsTypes.string,
+MenuItemDivider.propTypes = {
+    className: propTypes.string,
 }
 
 export default { MenuItemDivider }

@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Children, Fragment, useState } from "react"
-import propsTypes from "prop-types";
+import propTypes from "prop-types";
 
 
 const ComboBox = ({
@@ -88,44 +88,44 @@ const ComboBox = ({
     )
 }
 
-ComboBox.propsTypes = {
-    allowCustomValue: propsTypes.bool,
-    arialabel: propsTypes.string,
-    ariaLabel: propsTypes.string,
-    className: propsTypes.string,
-    direction: propsTypes.oneOf
+ComboBox.propTypes = {
+    allowCustomValue: propTypes.bool,
+    arialabel: propTypes.string,
+    ariaLabel: propTypes.string,
+    className: propTypes.string,
+    direction: propTypes.oneOf
         ([
             'top',
             'bottom',
         ]),
-    disabled: propsTypes.bool,
-    downshiftProps: propsTypes.bool,
-    helperText: propsTypes.node,
-    id: propsTypes.string,
-    initialSelectedItem: propsTypes.bool,
-    invalid: propsTypes.bool,
-    invalidText: propsTypes.node,
-    itemToElement: propsTypes.bool,
-    itemToString: propsTypes.bool,
-    items: propsTypes.bool,
-    light: propsTypes.bool,
-    onChange: propsTypes.string,
-    onInputChange: propsTypes.string,
-    onToggleClick: propsTypes,
-    placeholder: propsTypes.string,
-    readOnly: propsTypes.bool,
-    selectedItem: propsTypes.bool,
-    shouldFilterItem: propsTypes.bool,
-    size: propsTypes.oneOf
+    disabled: propTypes.bool,
+    downshiftProps: propTypes.bool,
+    helperText: propTypes.node,
+    id: propTypes.string,
+    initialSelectedItem: propTypes.bool,
+    invalid: propTypes.bool,
+    invalidText: propTypes.node,
+    itemToElement: propTypes.bool,
+    itemToString: propTypes.bool,
+    items: propTypes.bool,
+    light: propTypes.bool,
+    onChange: propTypes.string,
+    onInputChange: propTypes.string,
+    onToggleClick: propTypes.func,
+    placeholder: propTypes.string,
+    readOnly: propTypes.bool,
+    selectedItem: propTypes.bool,
+    shouldFilterItem: propTypes.bool,
+    size: propTypes.oneOf
         ([
             'sm',
             'md',
         ]),
-    slug: propsTypes.node,
-    titleText: propsTypes.node,
-    translateWithId: propsTypes.bool,
-    warn: propsTypes.bool,
-    warnText: propsTypes.node,
+    slug: propTypes.node,
+    titleText: propTypes.node,
+    translateWithId: propTypes.bool,
+    warn: propTypes.bool,
+    warnText: propTypes.node,
 }
 
 export default ComboBox;

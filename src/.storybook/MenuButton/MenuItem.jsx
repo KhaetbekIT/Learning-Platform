@@ -1,6 +1,8 @@
-import classNames from 'classnames';
-import { Fragment } from 'react'
+import classNames from "classnames"
+import { Fragment, useState } from "react"
 import propTypes from 'prop-types'
+
+
 
 const MenuItem = ({
     children,
@@ -11,24 +13,31 @@ const MenuItem = ({
     onClick,
     renderIcon,
     shortcut,
-    as,
     ...props
 }) => {
-    const Li = as;
     const classes = classNames
-        ([
-            className,
-            `MenuItem`
-        ])
+
+    const [renderIcon, setRenderIcon] = useState(false)
+
+    onClick = () => {
+        setRenderIcon(prev => !prev)
+    }
+
+    ([
+        className,
+        `MenuItem`
+    ])
+
     return (
         <Fragment>
-            <Li
+            <div
                 className={classes}
                 disabled={disabled}
-                onClick={onClick}
+                {...props}
+                onClick={setRenderIcon}
             >
                 {children}
-            </Li>
+            </div>
         </Fragment>
     )
 }
@@ -46,12 +55,11 @@ MenuItem.propTypes = {
     onClick: propTypes.func,
     renderIcon: propTypes.func,
     shortcut: propTypes.string,
-    as: propTypes.string,
 }
 
 MenuItem.defaultProps = {
     kind: 'default',
-    as: 'string',
 }
+
 
 export default { MenuItem };

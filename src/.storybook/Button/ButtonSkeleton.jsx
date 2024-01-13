@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const ButtonSkeleton = ({
     className,
@@ -28,10 +28,10 @@ const ButtonSkeleton = ({
     )
 }
 
-ButtonSkeleton.protoTypes = {
-    className: propsTypes.string,
-    href: propsTypes.string,
-    size: propsTypes.oneOf
+ButtonSkeleton.propTypes = {
+    className: propTypes.string,
+    href: propTypes.string,
+    size: propTypes.oneOf
         ([
             'sm',
             'md',
@@ -39,7 +39,7 @@ ButtonSkeleton.protoTypes = {
             'xl',
             '2xl',
         ]).isRequired,
-    small: propsTypes.bool
+    small: propTypes.bool
 }
 ButtonSkeleton.defaultProps = {
     size: 'lg',
