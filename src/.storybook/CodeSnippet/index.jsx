@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import propsTypes from "prop-types";
+import propTypes from "prop-types";
 
 const CodeSnippet = ({
     align,
@@ -47,8 +47,8 @@ const CodeSnippet = ({
     )
 }
 
-CodeSnippet.propsTypes = {
-    align: propsTypes.oneOf
+CodeSnippet.propTypes = {
+    align: propTypes.oneOf
         ([
             'top',
             'top-left',
@@ -59,31 +59,31 @@ CodeSnippet.propsTypes = {
             'left',
             'right',
         ]).isRequired,
-    arialabel: propsTypes.string,
-    ariaLabel: propsTypes.bool,
-    children: propsTypes.node,
-    className: propsTypes.string,
-    copyButtonDescription: propsTypes.string,
-    copyText: propsTypes.string,
-    disabled: propsTypes.bool,
-    feedback: propsTypes.string,
-    feedbackTimeout: propsTypes.number,
-    hideCopyButton: propsTypes.bool,
-    light: propsTypes.bool,
-    maxCollapsedNumberOfRows: propsTypes.number,
-    maxExpandedNumberOfRows: propsTypes.number,
-    minCollapsedNumberOfRows: propsTypes.number,
-    minExpandedNumberOfRows: propsTypes.number,
-    onClick: propsTypes.bool,
-    showLessText: propsTypes.string,
-    showMoreText: propsTypes.string,
-    type: propsTypes.oneOf
+    arialabel: propTypes.string,
+    ariaLabel: propTypes.bool,
+    children: propTypes.node,
+    className: propTypes.string,
+    copyButtonDescription: propTypes.string,
+    copyText: propTypes.string,
+    disabled: propTypes.bool,
+    feedback: propTypes.string,
+    feedbackTimeout: propTypes.number,
+    hideCopyButton: propTypes.bool,
+    light: propTypes.bool,
+    maxCollapsedNumberOfRows: propTypes.number,
+    maxExpandedNumberOfRows: propTypes.number,
+    minCollapsedNumberOfRows: propTypes.number,
+    minExpandedNumberOfRows: propTypes.number,
+    onClick: propTypes.bool,
+    showLessText: propTypes.string,
+    showMoreText: propTypes.string,
+    type: propTypes.oneOf
         ([
             'single',
             'inline',
             'multi',
         ]).isRequired,
-    wrapText: propsTypes.bool,
+    wrapText: propTypes.bool,
 }
 
 CodeSnippet.defaulProps = {

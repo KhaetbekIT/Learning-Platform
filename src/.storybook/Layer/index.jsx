@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Fragment } from "react";
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const Layer = ({
     as,
@@ -29,15 +29,15 @@ const Layer = ({
     )
 }
 
-Layer.propsTypes = {
-    as: propsTypes.oneOf
+Layer.propTypes = {
+    as: propTypes.oneOf
         ([
             'ol',
             'ul',
         ]).isRequired,
-    children: propsTypes.node,
-    className: propsTypes.string,
-    level: propsTypes.oneOf
+    children: propTypes.node,
+    className: propTypes.string,
+    level: propTypes.oneOf
         ([
             0,
             1,

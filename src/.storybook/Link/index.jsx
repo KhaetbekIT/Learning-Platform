@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Fragment } from 'react';
-import propsTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Link = ({
     as,
@@ -36,21 +36,21 @@ const Link = ({
     )
 }
 
-Link.propstypes = {
-    as: propsTypes.string,
-    children: propsTypes.node,
-    className: propsTypes.string,
-    disabled: propsTypes.bool,
-    href: propsTypes.string,
-    inline: propsTypes.bool,
-    renderIcon: propsTypes.object,
-    size: propsTypes.oneOf
+Link.propTypes = {
+    as: propTypes.string,
+    children: propTypes.node,
+    className: propTypes.string,
+    disabled: propTypes.bool,
+    href: propTypes.string,
+    inline: propTypes.bool,
+    renderIcon: propTypes.object,
+    size: propTypes.oneOf
         ([
             'sm',
             'md',
             'lg',
         ]),
-    visited: propsTypes.bool,
+    visited: propTypes.bool,
 }
 
 Link.defautProps = {

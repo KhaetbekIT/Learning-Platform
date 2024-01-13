@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const MenuItemSelectable = ({
     className,
@@ -27,12 +27,12 @@ const MenuItemSelectable = ({
         </Fragment>
     )
 }
-MenuItemSelectable.propsTypes = {
-    className: propsTypes.string,
-    defaultSelected: propsTypes.bool,
-    label: propsTypes.string,
-    onChange: propsTypes.func,
-    selected: propsTypes.bool,
+MenuItemSelectable.propTypes = {
+    className: propTypes.string,
+    defaultSelected: propTypes.bool,
+    label: propTypes.string,
+    onChange: propTypes.func,
+    selected: propTypes.bool,
 }
 
 export default { MenuItemSelectable }

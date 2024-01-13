@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { Fragment } from "react"
-import propsTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 const CheckboxGroup = ({
     children,
@@ -35,18 +35,16 @@ const CheckboxGroup = ({
     )
 }
 
-CheckboxGroup.propsTypes = {
-    children: propsTypes.node,
-    className: propsTypes.string,
-    helperText: propsTypes.node,
-    invalid: propsTypes.bool,
-    invalidText: propsTypes.node,
-    legendId: propsTypes.node,
-    legendText: propsTypes.node,
-    readOnly: propsTypes.bool,
-    slug: propsTypes.node,
-    warn: propsTypes.bool,
-    warnText: propsTypes.node,
+CheckboxGroup.propTypes = {
+    children: propTypes.node,
+    className: propTypes.string,
+    helperText: propTypes.node,
+    invalid: propTypes.bool,
+    invalidText: propTypes.node,
+    readOnly: propTypes.bool,
+    slug: propTypes.node,
+    warn: propTypes.bool,
+    warnText: propTypes.node,
 }
 
 export default { CheckboxGroup };
