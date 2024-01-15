@@ -12,8 +12,8 @@ const ErrorBoundary = ({
 
     const [shouldThrowError, setShouldThrowError] = useState(false);
 
-    function onClick() {
-        setShouldThrowError(!shouldThrowError);
+    const onClick = () => {
+        setShouldThrowError((prev) => !prev)
     }
 
     return (
