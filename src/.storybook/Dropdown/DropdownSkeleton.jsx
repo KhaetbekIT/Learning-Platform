@@ -18,4 +18,9 @@ const DropdownSkeleton = ({
     )
 }
 
+DropdownSkeleton.propTypes = {
+    className: propTypes.string,
+    size: propTypes.string
+}
+
 export { DropdownSkeleton }
