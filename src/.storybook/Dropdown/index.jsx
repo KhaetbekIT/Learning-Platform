@@ -21,7 +21,11 @@ const Dropdown = ({
   readOnly,
   renderSelectedItem,
   selectedItem,
-  size,
+  sm,
+  md,
+  lg,
+  color,
+  sizeDropdown,
   slug,
   titleText,
   type,
@@ -32,7 +36,15 @@ const Dropdown = ({
 }) => {
   const [open, setOpen] = useState(false);
 
-  const classes = classnames([className, `media__${size}`, "dropdown"]);
+  const classes = classnames([
+    className,
+    `media__sm-${sm}`,
+    `media__md-${md}`,
+    `media_lg-${lg}`,
+    `dropdown`,
+    `dropdown__${color}`,
+    `dropdown__${sizeDropdown}`
+  ]);
 
   const openDropdown = () => {
     setOpen(!open);
@@ -45,7 +57,7 @@ const Dropdown = ({
   ));
 
   return (
-    <div className={classes} id={id} onClick={openDropdown}>
+    <div className={classes} id={id} onClick={openDropdown} {...props}>
       <button type={type}>{initialSelectedItem}</button>
       <ul hidden={!open}>{item}</ul>
     </div>
@@ -71,6 +83,11 @@ Dropdown.propTypes = {
   readOnly: propTypes.bool,
   renderSelectedItem: propTypes.func,
   selectedItem: propTypes.any,
+  lg: propTypes.string,
+  sm: propTypes.string,
+  md: propTypes.string,
+  color: propTypes.oneOf(["primary", "secondary"]),
+  sizeAccordion: propTypes.oneOf([`small`, `default`, `large`]),
   size: propTypes.oneOf(["sm", "md", "lg"]),
   slug: propTypes.node,
   titleText: propTypes.node,
@@ -100,6 +117,11 @@ Dropdown.defaultProps = {
     return "";
   },
   type: "default",
+  color: "primary",
+  sizeAccordion: "default",
+  lg: "default",
+  md: "default",
+  sm: "default",
 };
 
 export default Dropdown;
