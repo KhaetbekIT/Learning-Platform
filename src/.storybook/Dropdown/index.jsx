@@ -47,7 +47,7 @@ const Dropdown = ({
   ]);
 
   const openDropdown = () => {
-    setOpen(!open);
+    setOpen((prev) => (!prev));
   };
 
   const item = items.map(({ ...option }, i) => (
