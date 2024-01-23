@@ -1,0 +1,13 @@
+// Font-family
+
+$gilroy: "Gilroy", sans-serif;
+$roboto: "Roboto", sans-serif;
+$roboto-condensed: "Roboto Condensed", sans-serif;
+
+// Rem
+
+@function ToRem($number: 1) {
+  @return ($number * 0.069);
+}
+
+// Media
