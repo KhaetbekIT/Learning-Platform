@@ -27,7 +27,7 @@ Ilovangiz foydalanishga tayyor!
 
 Qoʻshimcha maʼlumot olish uchun [deployment](https://facebook.github.io/create-react-app/docs/deployment) haqidagi boʻlimga qarang.
 
-### `npm run eject`
+### `npm run eject` 
 
 **Izoh: bu bir tomonlama operatsiya. Bir marta “tashqariga” qaytsangiz, orqaga qaytolmaysiz!**
 

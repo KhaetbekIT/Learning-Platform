@@ -5,9 +5,8 @@ module.exports = function override(config){
         "@storybook": "src/storybook",
         "@styles": "src/styles",
         "@image": "src/images",
-        "@page": "src/pages",
-        "@fonts": "src/fonts",
-        "@": "src"
+        "@pages": "src/pages",
+        "@fonts": "src/fonts"
 
     })(config);
 
