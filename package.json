@@ -23,7 +23,7 @@
   "scripts": {
     "start": "concurrently \"npx json-server --watch db/db.json --port=9000\" \"react-app-rewired start\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b main -d build",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
@@ -49,7 +49,6 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "gh-pages": "^6.1.1",
     "prettier": "3.1.1",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1"
