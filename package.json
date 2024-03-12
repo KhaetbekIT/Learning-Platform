@@ -2,6 +2,7 @@
   "name": "platform",
   "version": "0.2.0",
   "private": true,
+  "homepage": "https://khaetbekit.github.io/Platform",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -55,6 +56,6 @@
     "react-app-rewired": "^2.2.1"
   },
   "engines": {
-    "node": ">=18 <20"
+    "node": ">=18 <21"
   }
 }
