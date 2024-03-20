@@ -1,17 +1,18 @@
 import { Fragment } from "react";
 import { Helmet } from "react-helmet";
+import { Outlet } from "react-router-dom";
 
-const Design = () => {
+const Register = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Design</title>
+        <title>Register</title>
       </Helmet>
       <section>
-        <div className="container mx-auto">testing container</div>
+        <Outlet />
       </section>
     </Fragment>
   );
 };
 
-export default Design;
+export default Register;

@@ -24,6 +24,10 @@ body {
   & > * {
     flex-shrink: 0;
   }
+
+  & > .main {
+    flex-grow: 1;
+  }
 }
 
 button,
@@ -36,6 +40,7 @@ select {
   display: inline-block;
   font-weight: inherit;
   font-family: inherit;
+  color: inherit;
 }
 
 button,
