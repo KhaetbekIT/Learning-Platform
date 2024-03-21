@@ -1,9 +1,9 @@
-import Home from "@pages/home";
-import { SignUp } from "@pages/register/sign-up";
+import Home from "@/pages/home";
+import { SignUp } from "@/pages/register/sign-up";
 import Design from "../design";
 import Layout from "../layout";
-import Register from "@pages/register";
-import { SignIn } from "@pages/register/sign-in";
+import Register from "@/pages/register";
+import { SignIn } from "@/pages/register/sign-in";
 
 const routes = [
   {
@@ -23,11 +23,11 @@ const routes = [
         element: <Register />,
         children: [
           {
-            path: "/register/sign-in",
+            path: "sign-in",
             element: <SignIn />,
           },
           {
-            path: "/register/sign-up",
+            path: "sign-up",
             element: <SignUp />,
           },
         ],
