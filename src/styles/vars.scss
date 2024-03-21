@@ -1,8 +1,13 @@
 // Font-family
 
-$gilroy: "Gilroy", sans-serif;
-$roboto: "Roboto", sans-serif;
-$roboto-condensed: "Roboto Condensed", sans-serif;
+$font-family: "Gilroy", sans-serif;
+$second-family: "Roboto", sans-serif;
+$third-family: "Gilroy-Light", sans-serif;
+$font3: "Gilroy-Black", sans-serif;
+$font4: "Inter", sans-serif;
+$font5: "Gilroy", sans-serif;
+$font6: "Gilroy-SemiBold", sans-serif;
+$font7: "Gilroy-Heavy", sans-serif;
 
 // Rem
 
@@ -11,3 +16,28 @@ $roboto-condensed: "Roboto Condensed", sans-serif;
 }
 
 // Media
+
+@mixin BreakpointUp($value) {
+  @if ($value == "small") {
+    @media (min-width: ToRem(1)) {
+      @content;
+    }
+  }
+  @if ($value == "tablet") {
+    @media (min-width: ToRem(640)) {
+      @content;
+    }
+  }
+  @if ($value == "laptop") {
+    @media (min-width: ToRem(1024)) {
+      @content;
+    }
+  }
+  @if ($value == "desktop") {
+    @media (min-width: ToRem(1280)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
