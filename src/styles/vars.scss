@@ -12,7 +12,7 @@ $font7: "Gilroy-Heavy", sans-serif;
 // Rem
 
 @function ToRem($number: 1) {
-  @return ($number * 0.069);
+  @return ($number * 0.069) + 0rem;
 }
 
 // Media
