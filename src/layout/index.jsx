@@ -1,8 +1,9 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { Helmet } from "react-helmet";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
+  console.clear();
   return (
     <Fragment>
       <Helmet>

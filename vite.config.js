@@ -12,7 +12,9 @@ export default defineConfig({
     outDir: "build",
   },
   plugins: [
-    react(),
+    react({
+      jsxRuntime: "automatic",
+    }),
     envCompatible(),
     svgrPlugin({
       svgrOptions: {
@@ -23,6 +25,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "@/assets": path.resolve(__dirname, "./src/assets"),
+      "@/images": path.resolve(__dirname, "./src/assets/image"),
     },
   },
   esbuild: {

@@ -1,7 +1,7 @@
 import Home from "@/pages/home";
 import { SignUp } from "@/pages/register/sign-up";
-import Design from "../design";
-import Layout from "../layout";
+import Design from "@/design";
+import Layout from "@/layout";
 import Register from "@/pages/register";
 import { SignIn } from "@/pages/register/sign-in";
 
