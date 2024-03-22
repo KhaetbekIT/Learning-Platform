@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "../title/title";
+import { Title } from "../title";
 import 'tailwindcss/tailwind.css';
 
 export const Card = ({
@@ -10,7 +10,7 @@ export const Card = ({
     lessons
 }) => {
     return (
-        <div className="w-70 border rounded overflow-hidden">
+        <div className="w-75 border rounded overflow-hidden">
             <img
                 src={img}
                 alt={imgError}
