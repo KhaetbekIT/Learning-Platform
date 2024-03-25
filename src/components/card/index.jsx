@@ -8,6 +8,7 @@ import CardStyle from "./card.module.scss";
 import CardImage1 from "../../assets/image/Illustrator-1.svg";
 import CardImage2 from "../../assets/image/Illustrator-2.svg";
 import CardImage3 from "../../assets/image/Illustrator-2-1.svg";
+import CardImage4 from "../../assets/image/Illustrator-1-1.svg";
 import Logo from "../../assets/image/logo-for-card.svg";
 
 export const Card = ({ variant, view, className, ...props }) => {
@@ -59,7 +60,7 @@ export const Card = ({ variant, view, className, ...props }) => {
             />
           </div>
 
-          <div className={`py-3.5 px-4 ${CardStyle[`Card__body`]}`}>
+          <div className={`pt-3.5 px-4 ${CardStyle[`Card__body`]}`}>
             <ConfigProvider
               theme={{
                 components: {
@@ -167,7 +168,7 @@ export const Card = ({ variant, view, className, ...props }) => {
             />
           </div>
 
-          <div className={`py-3.5 px-4 ${CardStyle[`Card__body`]}`}>
+          <div className={`pt-3.5 px-4 ${CardStyle[`Card__body`]}`}>
             <ConfigProvider
               theme={{
                 components: {
@@ -235,9 +236,7 @@ export const Card = ({ variant, view, className, ...props }) => {
     ]);
     return (
       <Fragment>
-        <div
-          className={`w-80 pt-4 px-6 pb-7 relative rounded-large ${className}`}
-        >
+        <div className={`w-80 pt-4 px-6 relative rounded-large ${className}`}>
           <div className={`flex justify-between ${CardStyle[`Card__header`]}`}>
             <span className={CardStyle[`Card__icon`]}>
               <svg
@@ -314,6 +313,125 @@ export const Card = ({ variant, view, className, ...props }) => {
 
             <Image src={CardImage3} className={`absolute bottom-0 right-0`} />
           </div>
+        </div>
+      </Fragment>
+    );
+  }
+
+  if (variant == 4 && view === "dark") {
+    className = classNames([
+      CardStyle["Card"],
+      className,
+      CardStyle[`Card__variant-${variant}`],
+      CardStyle[`Card__view-${view}`],
+    ]);
+    return (
+      <Fragment>
+        <div
+          className={`w-80 text-white pt-4 px-6 relative rounded-large ${className}`}
+        >
+          <div className={`flex justify-between ${CardStyle[`Card__header`]}`}>
+            <span className={CardStyle[`Card__icon`]}>
+              <svg
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="38" height="38" rx="19" fill="#56CCF2" />
+                <path
+                  d="M19 28L12 24.2V18.2L8 16L19 10L30 16V24H28V17.1L26 18.2V24.2L19 28ZM19 19.7L25.85 16L19 12.3L12.15 16L19 19.7ZM19 25.725L24 23.025V19.25L19 22L14 19.25V23.025L19 25.725Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+
+            <ConfigProvider
+              theme={{
+                components: {
+                  colorText: "inherit",
+                },
+              }}
+            >
+              <Typography.Text className={`flex gap-1.5 items-center`}>
+                <span>12 lessons</span>
+                <span>&#x2022;</span>
+                <span>7 quiz</span>
+              </Typography.Text>
+            </ConfigProvider>
+          </div>
+
+          <div className={`pt-4 space-y-2 ${CardStyle[`Card__body`]}`}>
+            <ConfigProvider
+              theme={{
+                components: {
+                  Typography: {
+                    fontSizeHeading4: 14,
+                    fontSizeHeading3: 16,
+                    titleMarginBottom: 0,
+                    titleMarginTop: 0,
+                    fontWeightStrong: 400,
+                  },
+                },
+              }}
+            >
+              <Typography.Title
+                level={4}
+                className={CardStyle["Card__title--dark"]}
+              >
+                {props.title}
+              </Typography.Title>
+              <Typography.Title
+                level={3}
+                className={CardStyle["Card__subtitle--dark"]}
+              >
+                {props.subtitle}
+              </Typography.Title>
+            </ConfigProvider>
+          </div>
+
+          <div className={`mt-14 pt-0.5 ${CardStyle[`Card__footer`]}`}>
+            <ConfigProvider
+              theme={{
+                components: {
+                  Button: {
+                    paddingBlock: 0,
+                    paddingInline: 0,
+                    colorBorder: "none",
+                    defaultHoverBorderColor: "none",
+                    colorBgContainer: "none",
+                    colorText: "inherit",
+                  },
+                },
+              }}
+            >
+              <Button
+                icon={<PiUserFill />}
+                className={`flex gap-1.5 items-center`}
+              >
+                {props.copyright}
+              </Button>
+            </ConfigProvider>
+
+            <Image src={CardImage4} className={`absolute bottom-0 right-0`} />
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
+
+  if (variant == 5 && view === "solution") {
+    className = classNames([
+      CardStyle["Card"],
+      className,
+      CardStyle[`Card__variant-${variant}`],
+      CardStyle[`Card__view-${view}`],
+    ]);
+    return (
+      <Fragment>
+        <div className={`w-72 ${className}`}>
+        
         </div>
       </Fragment>
     );

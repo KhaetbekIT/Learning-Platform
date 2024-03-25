@@ -36,9 +36,20 @@ const Design = () => {
               view={"light"}
               bannertitle={`Machine Learning`}
               subtitle={`Overview of available development boards`}
-              title={`variant: 2, view: secondary`}
+              title={`variant: 3, view: light`}
               copyright={`Shams Tabrez`}
             />
+
+            <Card
+              variant={4}
+              view={"dark"}
+              bannertitle={`Machine Learning`}
+              subtitle={`Overview of available development boards`}
+              title={`variant: 4, view: dark`}
+              copyright={`Shams Tabrez`}
+            />
+
+            <Card variant={5} view={"solution"} />
           </div>
         </div>
       </section>
