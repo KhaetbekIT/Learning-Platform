@@ -1,12 +1,39 @@
-import React from "react";
+import { Fragment } from "react";
+import { ConfigProvider, Typography } from "antd";
+import classNames from "classnames";
+import TypographyStyle from "./title.module.scss";
 
-export const Title = ({
-    className,
-    children,
-    as = "p",
-    ...props
+const Title = ({
+  className,
+  children,
+  level = 1,
+  mb = 0.5,
+  mt = 1.2,
+  colorText = "inherit",
 }) => {
-    const Title = as || 'h1' || 'h2' || 'h3' || 'h4' || 'h5' || 'h6';
-
-    return <Title as={as} className={className} {...props}>{children}</Title>
+  className = classNames([
+    TypographyStyle["Typography"],
+    TypographyStyle[`Typography-${level}`],
+  ]);
+  return (
+    <Fragment>
+      <ConfigProvider
+        theme={{
+          components: {
+            Typography: {
+              titleMarginBottom: mb,
+              titleMarginTop: mt,
+              colorText: colorText,
+            },
+          },
+        }}
+      >
+        <Typography.Title level={level}>
+          <span className={className}>{children}</span>
+        </Typography.Title>
+      </ConfigProvider>
+    </Fragment>
+  );
 };
+
+export { Title };

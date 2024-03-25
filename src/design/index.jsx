@@ -2,6 +2,7 @@ import { Card } from "@/components/card";
 import { Fragment } from "react";
 import { Helmet } from "react-helmet";
 import "tailwindcss/tailwind.css";
+import { Title } from "@/components/title";
 
 const Design = () => {
   return (
@@ -39,6 +40,13 @@ const Design = () => {
               copyright={`Shams Tabrez`}
             />
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto">
+          <Title mb={3} level={3} colorText={"red"}>
+            1 - Heading 1
+          </Title>
         </div>
       </section>
     </Fragment>
