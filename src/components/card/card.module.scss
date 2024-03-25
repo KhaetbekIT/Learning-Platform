@@ -35,6 +35,11 @@
       font-family: $third-family;
       color: #4f4f4f !important;
     }
+
+    &--dark {
+      font-family: $third-family;
+      color: inherit !important;
+    }
   }
 
   &__illustrator {
@@ -52,17 +57,27 @@
       font-family: $font-family;
       color: #4f4f4f !important;
     }
+
+    &--dark {
+      font-family: $third-family;
+      color: inherit !important;
+    }
   }
 
   &__view {
-    &-light {
+    &-light,
+    &-dark {
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-      background: $color-white;
+      height: ToRem(238);
+      border-radius: 8px;
+    }
 
-      .Card__body {
-        & > * + * {
-        }
-      }
+    &-light {
+      background: $color-white;
+    }
+
+    &-dark {
+      background: $color-dark;
     }
   }
 }
