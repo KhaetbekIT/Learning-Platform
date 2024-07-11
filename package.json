@@ -1,68 +1,26 @@
 {
   "name": "platform",
-  "version": "0.2.0",
   "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^2.2.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.15.3",
-    "axios": "^1.6.5",
-    "classnames": "^2.5.1",
-    "json-server": "^0.17.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^5.0.1",
-    "react-redux": "^9.1.0",
-    "react-router-dom": "^6.21.1",
-    "redux": "^5.0.1",
-    "sass": "^1.69.7",
-    "vite-plugin-env-compatible": "^2.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "concurrently \"npx json-server --watch db/db.json --port=9000\" \"vite\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "dev": "vite",
     "build": "vite build",
-    "test": "vite test",
-    "server": "node index.js",
-    "serve": "vite preview"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.19",
-    "concurrently": "^8.2.2",
-    "gh-pages": "^6.1.1",
-    "postcss": "^8.4.38",
-    "prettier": "3.1.1",
-    "react-app-rewire-alias": "^1.1.7",
-    "react-app-rewired": "^2.2.1",
-    "tailwindcss": "^3.4.1",
-    "vite": "^5.2.2",
-    "vite-plugin-svgr": "^4.2.0"
-  },
-  "engines": {
-    "node": ">=18 <21"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.1"
   }
 }

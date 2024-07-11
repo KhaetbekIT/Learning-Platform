@@ -1,9 +1,0 @@
-{
-  "videos": [
-    {
-      "id": 1,
-      "video-poster": "poster.jpg",
-      "source": ["video.mp4"]
-    }
-  ]
-}
