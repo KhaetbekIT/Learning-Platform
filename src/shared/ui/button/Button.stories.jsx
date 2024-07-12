@@ -7,7 +7,21 @@ export default {
 };
 
 export const Primary = {
+  name: "Первостепенная",
   args: {
-    children: "Buy",
+    children: "Primary",
+  },
+};
+export const Secondary = {
+  name: "Второстепенная ",
+  args: {
+    children: "black",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Черная кнопка с белым текстом",
+      },
+    },
   },
 };
