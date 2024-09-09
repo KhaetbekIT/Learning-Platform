@@ -2,11 +2,15 @@
 const preview = {
   parameters: {
     backgrounds: {
-      default: "dark",
+      default: "light",
       values: [
         {
           name: "dark",
           value: "#16171d",
+        },
+        {
+          name: "light",
+          value: "#fff",
         },
       ],
     },

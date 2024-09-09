@@ -1,0 +1,290 @@
+@import "../styles/main";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: inherit;
+}
+
+.icon {
+  font-size: 24px;
+  color: $white;
+}
+
+.avatar {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+.drawer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 310px;
+
+  %content {
+    color: $white;
+    font-family: $second-family;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 16px;
+    @extend %content;
+  }
+
+  &-subtitle {
+    font-weight: 300;
+    font-size: 12px;
+    @extend %content;
+  }
+
+  &-expand {
+    cursor: pointer;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $pink;
+    font-size: 24px;
+
+    .icon {
+      color: $logo;
+    }
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 24px;
+  color: $white;
+  background: transparent;
+  padding: 20px 25px;
+  border-radius: 8px;
+
+  &.active {
+    background: $sky;
+  }
+}
+
+.search {
+  max-width: 250px;
+  width: 100%;
+
+  & > * + * {
+    margin-top: 20px !important;
+  }
+  &-label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+  }
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    color: $logo;
+  }
+  &-input {
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 4px 37px 4px 10px;
+    display: block;
+    width: -webkit-fill-available;
+    height: 32px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #828282;
+    }
+  }
+
+  &-list {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+
+    & > * + * {
+      margin-top: 16px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-text {
+      font-family: $third-family;
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray;
+
+      border: 1px solid #bdbdbd;
+      border-radius: 10px;
+      padding: 6px 10px;
+      width: 177px;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        color: $logo;
+      }
+    }
+  }
+}
+
+.card-course {
+  border-radius: 4px;
+  overflow: hidden;
+  width: 300px;
+
+  &-name {
+    font-weight: 400;
+    font-size: 16px;
+
+    padding: 5px 8px;
+    border-radius: 2px;
+    width: 150px;
+    background: rgba(13, 64, 89, 0.35);
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 4px 8px;
+    width: 204px;
+    background: rgba(45, 156, 219, 0.28);
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &-logo {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 135px !important;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 105px !important;
+  }
+
+  &-header {
+    padding: 32px 0;
+    background: $logo;
+    font-family: $font3;
+    color: $white;
+    height: 200px;
+    position: relative;
+
+    & > * + * {
+      margin-top: 5px;
+    }
+  }
+  
+  &-footer{
+    background: $white;
+    padding: 16px;
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background: var(--white);
+    border: 1px solid $drawer;
+    border-radius: 0 0 4px 4px;
+    
+    & > * + *{
+      margin-top: 10px;
+    }
+  }
+  
+  &-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &-subtitle{
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 205px;
+  }
+  
+  &-by{
+    display: flex;
+    align-items: center;
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+    
+    .icon{
+      color: $drawer;
+    }
+  }
+  
+  &-lessons{
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
