@@ -1,4 +1,4 @@
-name: CI Workflow
+name: API Workflow
 
 on:
   push:
@@ -27,25 +27,25 @@ jobs:
       - name: Start json-server
         run: yarn json-server --watch db.json --port 3001 &
 
-      # Установка ngrok
+
       - name: Install ngrok
         run: |
           curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null &&
           echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list &&
           sudo apt-get update && sudo apt-get install ngrok
 
-      # Запуск ngrok для проброса порта 3001
+
       - name: Start ngrok
         run: |
-          nohup ngrok http 3001 &
-          sleep 5 # даем время ngrok на установку туннеля
+          nohup ngrok http 3001 > /dev/null 2>&1 &
+          sleep 10 # Даем больше времени ngrok для установки туннеля
 
-      # Получение публичного URL от ngrok
+
       - name: Get ngrok URL
-        run: curl http://127.0.0.1:4040/api/tunnels > db.json
+        run: curl http://127.0.0.1:4040/api/tunnels > ngrok.json
 
-      # Вывод URL в лог
+
       - name: Display ngrok URL
         run: |
-          cat tunnels.json
-          echo "Ngrok URL: $(cat tunnels.json | jq -r .tunnels[0].public_url)"
+          cat ngrok.json
+          echo "Ngrok URL: $(cat ngrok.json | jq -r .tunnels[0].public_url)"
