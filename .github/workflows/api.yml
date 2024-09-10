@@ -42,7 +42,7 @@ jobs:
 
       # Получение публичного URL от ngrok
       - name: Get ngrok URL
-        run: curl http://127.0.0.1:4040/api/tunnels > tunnels.json
+        run: curl http://127.0.0.1:4040/api/tunnels > db.json
 
       # Вывод URL в лог
       - name: Display ngrok URL
