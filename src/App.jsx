@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet";
+import { Outlet } from "react-router-dom";
+import Shared from "./shared";
+import Logo from "./assets/other/logo.png"
+import { Badge } from "antd";
 
 const App = () => {
   return (
@@ -7,11 +11,24 @@ const App = () => {
         <title>Platform - App</title>
       </Helmet>
 
-      <article className="min-h-screen flex flex-col justify-between">
-        <header className={" bg-red-100"}>header</header>
-        <main className={"flex-grow"}>main</main>
-        <footer className={"bg-blue-100"}>footer</footer>
-      </article>
+      <main className="flex">
+        <Shared.Components.Menu username={"Username"} job={"Developer"} open logo={Logo} />
+
+        <article className="flex-grow p-5">
+          <header className="flex items-center justify-end gap-5">
+            <Shared.Components.Search data={[{ label: "ok" }]} />
+
+            <Badge count={3}>
+              <Shared.Components.Icons className={"text-black"} name={"bell"} />
+            </Badge>
+
+            <Shared.Components.Icons className={"text-black"} name={"settings"} />
+          </header>
+
+          <Outlet />
+        </article>
+
+      </main>
     </>
   );
 };
