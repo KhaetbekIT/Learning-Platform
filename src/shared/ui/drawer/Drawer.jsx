@@ -3,9 +3,9 @@ import classNames from "classnames";
 import { MdFaceUnlock } from "react-icons/md";
 import { Icons } from "./../icon/Icons.jsx";
 
-const Drawer = ({ className, title, subtitle, icon }) => {
+const Drawer = ({ className, title, subtitle, icon, onClick, onMouseLeave }) => {
   return (
-    <div className={classNames("drawer", className)}>
+    <div className={classNames("drawer", className)} onClick={onClick} onMouseLeave={onMouseLeave}>
       <div className="drawer-icon">
         <Icons name={"face"} />
       </div>
@@ -28,6 +28,8 @@ Drawer.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   icon: PropTypes.oneOf(["expand-less","expand-more"]),
+  onClick: PropTypes.func,
+  onMouseLeave: PropTypes.func,
 };
 
 export { Drawer };

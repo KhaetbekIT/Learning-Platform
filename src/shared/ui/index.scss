@@ -1,5 +1,13 @@
 @import "../styles/main";
 
+* {
+  &,
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -40,10 +48,15 @@ p {
   align-items: center;
   justify-content: space-between;
   max-width: 310px;
+  cursor: pointer;
 
   %content {
     color: $white;
     font-family: $second-family;
+  }
+
+  &-content {
+    flex-grow: 1;
   }
 
   &-title {
@@ -362,5 +375,51 @@ p {
   &-footer {
     padding-top: 60px;
     position: relative;
+  }
+}
+
+.menu {
+  background: $logo;
+  padding: 24px;
+  max-width: 126px;
+  color: $white;
+  min-height: 100vh;
+  position: relative;
+
+  &.active {
+    max-width: 345px;
+    width: 100%;
+  }
+
+  &-logo {
+    max-width: 125px;
+    width: 100%;
+    object-position: center;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  &-button {
+    width: 100%;
+  }
+
+  &-items {
+    margin: 30px 0;
+  }
+
+  &-subtitle {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 24px;
+  }
+
+  &-drawer {
+    &-wrapper {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+    }
   }
 }
