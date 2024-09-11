@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "concurrently \"vite --open\" \"storybook dev -p 6006\"",
+    "build": "concurrently \"vite build\" \"storybook build\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-sb": "storybook build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
@@ -17,6 +17,7 @@
     "apexcharts": "^3.53.0",
     "autoprefixer": "^10.4.19",
     "classnames": "^2.5.1",
+    "concurrently": "^9.0.0",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prop-types": "^15.8.1",
@@ -50,6 +51,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "json-server": "^1.0.0-beta.2",
     "storybook": "^8.2.1",
     "vite": "^5.3.1"
   }
