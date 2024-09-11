@@ -17,7 +17,7 @@ const Button = ({
   return (
     <button
       type={htmlType}
-      className={classNames("button", className, active && "active")}
+      className={classNames("button", active && "active", className)}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

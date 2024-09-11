@@ -10,7 +10,7 @@ const preview = {
         },
         {
           name: "light",
-          value: "#fff",
+          value: "#d5d5d5",
         },
       ],
     },
