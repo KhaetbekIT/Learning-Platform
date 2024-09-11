@@ -1,0 +1,45 @@
+name: API Workflow
+
+on:
+  push:
+    branches:
+      - backend
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Start json-server
+        run: yarn json-server --watch db.json --port 3001 &
+
+      - name: Install ngrok
+        run: |
+          curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null &&
+          echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list &&
+          sudo apt-get update && sudo apt-get install ngrok
+
+      - name: Start ngrok
+        run: |
+          nohup ngrok http 3001 > ngrok.log 2>&1 &
+          sleep 60 # Даем больше времени ngrok для установки туннеля
+
+      - name: Get ngrok URL
+        run: |
+          curl http://127.0.0.1:4040/api/tunnels > ngrok.json
+          cat ngrok.json
+
+      - name: Display ngrok URL
+        run: |
+          echo "Ngrok URL: $(cat ngrok.json | jq -r .tunnels[0].public_url)"

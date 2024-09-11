@@ -6,7 +6,8 @@ import { Drawer } from "./ui/drawer/Drawer.jsx";
 import { Search } from "./ui/search/Search.jsx";
 import { Statistics } from "./ui/statistic/Statistics.jsx";
 import { GitHubCalendar } from "./ui/calendar/GitHubCalendar.jsx";
-import {Image} from "./ui/image/Image.jsx";
+import { Image } from "./ui/image/Image.jsx";
+import { CardCourse, CardCourseImage } from "./ui/card/Card-Course.jsx";
 
 const Shared = {
   components: {
@@ -18,6 +19,9 @@ const Shared = {
     Statistics,
     GitHubCalendar,
     Image,
+    CardCourse,
+    CardCourseImage,
   },
 };
+
 export default Shared;
