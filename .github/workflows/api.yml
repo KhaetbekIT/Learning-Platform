@@ -3,10 +3,7 @@ name: API Workflow
 on:
   push:
     branches:
-      - main
       - backend
-      - development
-      - production
 
 jobs:
   build:
