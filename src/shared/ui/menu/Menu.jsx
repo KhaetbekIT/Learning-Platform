@@ -6,12 +6,12 @@ import { Button } from "./../button/Button.jsx";
 import { Icons } from "./../icon/Icons.jsx";
 import { Drawer } from "./../drawer/Drawer.jsx";
 
-const Menu = ({ logo, open, username, job }) => {
+const Menu = ({ logo, open, username, job, className }) => {
   const [ActiveButton, setActiveButton] = useState(1);
   const [OpenDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <menu className={classNames("menu", open ? "active" : null)}>
+    <menu className={classNames("menu", open ? "active" : null, className)}>
       <Image src={logo} className="menu-logo" />
 
       <div className="menu-items">
@@ -111,6 +111,7 @@ Menu.propTypes = {
   open: PropTypes.bool,
   job: PropTypes.string,
   username: PropTypes.string,
+  className: PropTypes.string
 };
 
 export { Menu };
