@@ -1,6 +1,7 @@
 @import "../styles/main";
 
 * {
+
   &,
   &:after,
   &:before {
@@ -90,10 +91,14 @@ p {
       color: $logo;
     }
 
-    & > * {
+    &>* {
       flex-shrink: 0;
     }
   }
+}
+
+a.button{
+  display: inline-flex;
 }
 
 .button {
@@ -119,16 +124,16 @@ p {
 .search {
   max-width: 250px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 
-  & > * + * {
-    margin-top: 20px !important;
-  }
   &-label {
     position: relative;
     display: inline-block;
     width: 100%;
     cursor: pointer;
   }
+
   &-icon {
     position: absolute;
     top: 50%;
@@ -136,6 +141,7 @@ p {
     transform: translateY(-50%);
     color: $logo;
   }
+
   &-input {
     outline: none;
     border: 1px solid #e0e0e0;
@@ -154,12 +160,17 @@ p {
   }
 
   &-list {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70%;
+    z-index: -1;
     margin: 0;
-    padding: 0;
+    padding: 20px 10px;
+    background: $white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 
-    & > * + * {
+    &>*+* {
       margin-top: 16px;
     }
   }
@@ -246,7 +257,7 @@ p {
     height: 200px;
     position: relative;
 
-    & > * + * {
+    &>*+* {
       margin-top: 5px;
     }
   }
@@ -256,7 +267,7 @@ p {
     padding: 16px;
     border-radius: 0 0 4px 4px;
 
-    & > * + * {
+    &>*+* {
       margin-top: 10px;
     }
 
@@ -352,7 +363,7 @@ p {
     font-size: 14px;
     color: $drawer;
 
-    & > * + * {
+    &>*+* {
       margin-top: 10px;
     }
   }
@@ -421,6 +432,105 @@ p {
       position: absolute;
       left: 24px;
       bottom: 24px;
+    }
+  }
+}
+
+.typography {
+  $font-size-base: 16px;
+  $line-height-base: 1.5;
+  $color-text: #333;
+  $color-heading: #111;
+
+  @mixin responsive-text($desktop-size, $mobile-size, $line-height: $line-height-base) {
+    font-size: $desktop-size;
+    line-height: $line-height;
+
+    @media (max-width: 768px) {
+      font-size: $mobile-size;
+    }
+  }
+
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+
+  &-h1 {
+    @include responsive-text(2.5rem, 2rem);
+  }
+
+  &-h2 {
+    @include responsive-text(2rem, 1.75rem);
+  }
+
+  &-h3 {
+    @include responsive-text(1.75rem, 1.5rem);
+  }
+
+  &-h4 {
+    @include responsive-text(1.5rem, 1.25rem);
+  }
+
+  &-h5 {
+    @include responsive-text(1.25rem, 1.1rem);
+  }
+
+  &-h6 {
+    @include responsive-text(1.1rem, 1rem);
+  }
+
+  &-text {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.card-point {
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 183px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  background: $white;
+
+  &-top {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &-title {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 10px;
+    color: $drawer;
+  }
+
+  &-content {
+    padding-top: 12px;
+
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    color: #4f4f4f;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $sky;
+
+    .icon {
+      font-size: 14px;
     }
   }
 }

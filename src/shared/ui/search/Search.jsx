@@ -60,7 +60,7 @@ const Search = ({ className, data }) => {
 
 Search.propTypes = {
   className: PropTypes.string,
-  data: Array.isArray(),
+  data: PropTypes.array
 };
 
 export { Search };
