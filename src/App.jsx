@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { Outlet } from "react-router-dom";
 import Shared from "./shared";
 import Logo from "./assets/other/logo.png"
-import { Badge } from "antd";
 
 const App = () => {
   return (
@@ -13,6 +12,7 @@ const App = () => {
 
       <main className="flex">
         <Shared.Components.Menu
+        initial={"/Platform/student/dashboard"}
           list={[
             {
               icon: <Shared.Components.Icons name="course" />,
