@@ -1,18 +1,18 @@
 The project uses all the necessary technologies to test and develop the site.
 
 ```bash
-yarn   	    # to install node_modules
+yarn   	    # для установки node_modules
 ```
 
 ```bash
-yarn dev    # to start the project
+yarn dev    # для запуск проекта (сайт и storybook)
 ```
 
 ```bash
-yarn build  # to build the project
+yarn build  # для сборки прокта
 ```
 
-# Routing Structure for student portal
+# Структура роутинга для студент портал
 
 ## Platform
 - **/dashboard** - Главная панель
