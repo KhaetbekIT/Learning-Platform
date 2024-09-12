@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import ReactApexChart from "react-apexcharts";
 
-const Statistics = ({ data, title }) => {
+const Statistics = ({ data, title, className }) => {
   const series = [
     {
       name: "Lessons",
@@ -58,13 +57,16 @@ const Statistics = ({ data, title }) => {
   };
 
   return (
-    <ReactApexChart height={300} type="bar" options={options} series={series} />
+    <div className={className}>
+      <ReactApexChart height={300} type="bar" options={options} series={series} />
+    </div>
   );
 };
 
 Statistics.propTypes = {
-  data: Array.isArray(),
+  data: PropTypes.array,
   title: PropTypes.string,
+  className: PropTypes.string
 };
 
 export { Statistics };

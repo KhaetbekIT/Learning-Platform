@@ -5,10 +5,27 @@ import { Image } from "./../image/Image.jsx";
 import { Button } from "./../button/Button.jsx";
 import { Icons } from "./../icon/Icons.jsx";
 import { Drawer } from "./../drawer/Drawer.jsx";
+import { Navigate } from "react-router-dom";
 
-const Menu = ({ logo, open, username, job, className }) => {
+const Menu = ({ logo, open, username, job, className, list }) => {
   const [ActiveButton, setActiveButton] = useState(1);
   const [OpenDrawer, setOpenDrawer] = useState(false);
+
+  const menuItem = list?.map((item, index) => {
+    return <Button
+      key={index}
+      className={"menu-button"}
+      active={ActiveButton === item?.key}
+      onClick={() => {
+        setActiveButton(item?.key)
+      }}
+      htmlType="button"
+      icon={item?.icon}
+      to={item?.link}
+    >
+      {open && item?.label}
+    </Button>
+  })
 
   return (
     <menu className={classNames("menu", open ? "active" : null, className)}>
@@ -28,45 +45,7 @@ const Menu = ({ logo, open, username, job, className }) => {
 
       <div className="menu-items">
         {open && <p className={"menu-subtitle"}>workspace</p>}
-        <Button
-          className={"menu-button"}
-          active={ActiveButton === 2}
-          onClick={() => setActiveButton(2)}
-          htmlType="button"
-          icon={<Icons name="course" />}
-        >
-          {open && "Courses"}
-        </Button>
-
-        <Button
-          className={"menu-button"}
-          active={ActiveButton === 3}
-          onClick={() => setActiveButton(3)}
-          htmlType="button"
-          icon={<Icons name="prototype" />}
-        >
-          {open && "Prototypes"}
-        </Button>
-
-        <Button
-          className={"menu-button"}
-          active={ActiveButton === 4}
-          onClick={() => setActiveButton(4)}
-          htmlType="button"
-          icon={<Icons name="discussion" />}
-        >
-          {open && "Discussion"}
-        </Button>
-
-        <Button
-          className={"menu-button"}
-          active={ActiveButton === 5}
-          onClick={() => setActiveButton(5)}
-          htmlType="button"
-          icon={<Icons name="live" />}
-        >
-          {open && "Live"}
-        </Button>
+        {menuItem}
       </div>
 
       <div className="menu-drawer-wrapper">
@@ -81,16 +60,16 @@ const Menu = ({ logo, open, username, job, className }) => {
             >
               {open && "Logout"}
             </Button>
-	          
-	          <Button
-		          className={"menu-button"}
-		          active={ActiveButton === 7}
-		          onClick={() => setActiveButton(7)}
-		          htmlType="button"
-		          icon={<Icons name="profile" />}
-	          >
-		          {open && "Profile"}
-	          </Button>
+
+            <Button
+              className={"menu-button"}
+              active={ActiveButton === 7}
+              onClick={() => setActiveButton(7)}
+              htmlType="button"
+              icon={<Icons name="profile" />}
+            >
+              {open && "Profile"}
+            </Button>
           </div>
         )}
 
@@ -111,7 +90,8 @@ Menu.propTypes = {
   open: PropTypes.bool,
   job: PropTypes.string,
   username: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  list: PropTypes.array
 };
 
 export { Menu };

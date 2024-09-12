@@ -10,6 +10,9 @@ import { GitHubCalendar } from "./ui/github-calendar/GitHub-Calendar.jsx";
 import { Image } from "./ui/image/Image.jsx";
 import { CardCourse, CardCourseImage } from "./ui/card/Card-Course.jsx";
 import { Menu } from "./ui/menu/Menu.jsx";
+import { Typography } from "./ui/typography/Typography.jsx";
+import { Header } from "./ui/header/Header.jsx";
+import { CardPoint } from "./ui/card/Point.jsx";
 
 const Shared = {
   Components: {
@@ -23,8 +26,11 @@ const Shared = {
     Image,
     CardCourse,
     CardCourseImage,
-    Menu
+    Menu,
+    Typography,
+    CardPoint
   },
+  Layout: { Header }
 };
 
 export default Shared;
