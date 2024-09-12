@@ -2,6 +2,7 @@ import { Menu } from "./Menu";
 import "./../index.scss"
 import LogoImage from "./../../../assets/other/logo.png"
 import { Icons } from "../icon/Icons";
+import { BrowserRouter } from "react-router-dom";
 
 export default {
   title: "UI/Menu",
@@ -17,10 +18,18 @@ export const Default = {
     job: "UI / UX Developer",
     username: "Mohammad Shams Tabrez",
     list: [
-      { icon: <Icons name={"course"} />, label: "Course", link: "/course", key: "1" },
-      { icon: <Icons name={"prototype"} />, label: "Prototype", link: "/prototype", key: "2" },
-      { icon: <Icons name={"discussion"} />, label: "Discussion", link: "/discussion", key: "3" },
-      { icon: <Icons name={"live"} />, label: "Live", link: "/live", key: "4" },
-    ]
+      { icon: <Icons name={"course"} />, label: "Course", link: "/root/course", key: "1" },
+      { icon: <Icons name={"prototype"} />, label: "Prototype", link: "/root/prototype", key: "2" },
+      { icon: <Icons name={"discussion"} />, label: "Discussion", link: "/root/discussion", key: "3" },
+      { icon: <Icons name={"live"} />, label: "Live", link: "/root/live", key: "4" },
+    ],
+    initial: "/root"
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };

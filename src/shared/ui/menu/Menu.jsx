@@ -7,7 +7,7 @@ import { Icons } from "./../icon/Icons.jsx";
 import { Drawer } from "./../drawer/Drawer.jsx";
 import { Navigate } from "react-router-dom";
 
-const Menu = ({ logo, open, username, job, className, list }) => {
+const Menu = ({ logo, open, username, job, className, list, initial }) => {
   const [ActiveButton, setActiveButton] = useState(1);
   const [OpenDrawer, setOpenDrawer] = useState(false);
 
@@ -19,7 +19,6 @@ const Menu = ({ logo, open, username, job, className, list }) => {
       onClick={() => {
         setActiveButton(item?.key)
       }}
-      htmlType="button"
       icon={item?.icon}
       to={item?.link}
     >
@@ -36,8 +35,8 @@ const Menu = ({ logo, open, username, job, className, list }) => {
           className={"menu-button"}
           active={ActiveButton === 1}
           onClick={() => setActiveButton(1)}
-          htmlType="button"
           icon={<Icons name="dashboard" />}
+          to={initial}
         >
           {open && "Dashboard"}
         </Button>
@@ -91,7 +90,8 @@ Menu.propTypes = {
   job: PropTypes.string,
   username: PropTypes.string,
   className: PropTypes.string,
-  list: PropTypes.array
+  list: PropTypes.array,
+  initial: PropTypes.string,
 };
 
 export { Menu };
