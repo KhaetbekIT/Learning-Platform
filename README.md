@@ -5,7 +5,7 @@ yarn   	    # для установки node_modules
 ```
 
 ```bash
-yarn dev    # для запуск проекта (сайт и storybook)
+yarn dev    # для запуска проекта (сайт и storybook)
 ```
 
 ```bash
