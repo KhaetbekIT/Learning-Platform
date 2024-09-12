@@ -12,15 +12,14 @@ yarn dev    # для запуска проекта (сайт и storybook)
 yarn build  # для сборки прокта
 ```
 
-# Структура роутинга для студент портал
-
-## Platform
-- **/dashboard** - Главная панель
-- **/courses** - Курсы
-- **/chat** - Чат
-  - **/chat/my-courses** - Мои курсы
-  - **/chat/catalog** - Каталог
-  - **/chat/details** - Детали
-- **/live** - Прямой эфир
-  - **/live/calendar** - Календарь событий
-  - **/live/live-chat** - Live-чат
+## Platform (Корневой маршрут)
+- **/student**
+  - **/dashboard** - Панель управления
+  - **/courses** - Курсы
+  - **/chat** - Чат
+    - **/my-courses** - Мои курсы
+    - **/catalog** - Каталог
+    - **/details** - Детали
+  - **/live** - Прямые эфиры
+    - **/calendar** - Календарь событий
+    - **/live-chat** - Чат в реальном времени
