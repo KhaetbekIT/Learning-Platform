@@ -1,6 +1,7 @@
 import { Button } from "./Button.jsx";
 import { Icons } from "./../icon/Icons.jsx";
 import "./../index.scss";
+import { BrowserRouter } from "react-router-dom";
 
 export default {
   title: "UI/Button",
@@ -15,6 +16,13 @@ export const Colored = {
     icon: <Icons name={"dashboard"} />,
     active: true
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const Transparent = {
@@ -23,6 +31,13 @@ export const Transparent = {
     htmlType: "button",
     icon: <Icons name={"dashboard"} />,
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const Colored2 = {
@@ -33,6 +48,13 @@ export const Colored2 = {
     active: true,
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const Transparent2 = {
@@ -42,6 +64,13 @@ export const Transparent2 = {
     icon: <Icons name={"dashboard"} />,
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const ColoredAndBadge = {
@@ -53,6 +82,13 @@ export const ColoredAndBadge = {
     children: "Button",
     badge: 5
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };
 
 export const TransparentAndBadge = {
@@ -63,4 +99,11 @@ export const TransparentAndBadge = {
     children: "Button",
     badge: 5
   },
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };

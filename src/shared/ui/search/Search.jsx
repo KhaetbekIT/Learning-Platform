@@ -12,13 +12,17 @@ const Search = ({ className, data }) => {
   };
 
   useEffect(() => {
-    setFiltered(() => {
-      return data.filter((item) => {
-        return Object.values(item).some((value) =>
-          value.toString().toLowerCase().includes(Value?.toLowerCase()),
-        );
+    if (Value?.trim() === "") {
+      setFiltered([])
+    } else {
+      setFiltered(() => {
+        return data.filter((item) => {
+          return Object.values(item).some((value) =>
+            value.toString().toLowerCase().includes(Value?.toLowerCase()),
+          );
+        });
       });
-    });
+    }
   }, [Value]);
 
   const filteredItem = Filtered.map((item, i) => {
@@ -56,7 +60,7 @@ const Search = ({ className, data }) => {
 
 Search.propTypes = {
   className: PropTypes.string,
-  data: Array.isArray(),
+  data: PropTypes.array
 };
 
 export { Search };

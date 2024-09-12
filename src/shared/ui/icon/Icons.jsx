@@ -26,6 +26,8 @@ import {
   MdPerson,
 } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import { FaTelegram } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa6";
 
 const Icons = ({ className, style, name }) => {
   switch (name) {
@@ -190,8 +192,32 @@ const Icons = ({ className, style, name }) => {
         />
       );
     }
+    case "telegram": {
+      return (
+        <FaTelegram
+          className={classNames("icon", className)}
+          style={style}
+        />
+      );
+    }
+    case "instagram": {
+      return (
+        <FaInstagram
+          className={classNames("icon", className)}
+          style={style}
+        />
+      );
+    }
+    case "youtube": {
+      return (
+        <FaYoutube
+          className={classNames("icon", className)}
+          style={style}
+        />
+      );
+    }
     default: {
-      return icon;
+      return name;
     }
   }
 };
@@ -224,6 +250,9 @@ Icons.propTypes = {
     "face",
     "search",
     "person",
+    "telegram",
+    "instagram",
+    "youtube"
   ]),
 };
 

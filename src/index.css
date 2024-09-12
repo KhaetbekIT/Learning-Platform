@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.h2{
+	font-family: $font-family;
+	font-weight: 400;
+	font-size: 32px;
+	color: #000;
+}

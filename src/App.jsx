@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet";
+import { Outlet } from "react-router-dom";
+import Shared from "./shared";
+import Logo from "./assets/other/logo.png"
+import { Badge } from "antd";
 
 const App = () => {
   return (
@@ -7,11 +11,45 @@ const App = () => {
         <title>Platform - App</title>
       </Helmet>
 
-      <article className="min-h-screen flex flex-col justify-between">
-        <header className={" bg-red-100"}>header</header>
-        <main className={"flex-grow"}>main</main>
-        <footer className={"bg-blue-100"}>footer</footer>
-      </article>
+      <main className="flex">
+        <Shared.Components.Menu
+          list={[
+            {
+              icon: <Shared.Components.Icons name="course" />,
+              key: '1',
+              label: 'Course',
+              link: '/Platform/student/course'
+            },
+            {
+              icon: <Shared.Components.Icons name="prototype" />,
+              key: '2',
+              label: 'Prototype',
+              link: '/Platform/student/prototype'
+            },
+            {
+              icon: <Shared.Components.Icons name="discussion" />,
+              key: '3',
+              label: 'Discussion',
+              link: '/Platform/student/discussion'
+            },
+            {
+              icon: <Shared.Components.Icons name="live" />,
+              key: '4',
+              label: 'Live',
+              link: '/Platform/student/live'
+            }
+          ]}
+          logo={Logo}
+          open
+          username="Mohammad Shams Tabrez"
+          job={"UI/UX Developer"}
+        />
+
+        <article className="flex-grow p-5">
+          <Outlet />
+        </article>
+
+      </main>
     </>
   );
 };

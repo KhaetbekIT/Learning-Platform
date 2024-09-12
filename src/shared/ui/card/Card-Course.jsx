@@ -68,10 +68,11 @@ const CardCourseImage = ({
   by,
   icon,
   onClick,
+  className
 }) => {
   return (
     <div
-      className={classNames("card-course card-course--image", mode)}
+      className={classNames("card-course card-course--image", mode, className)}
       onClick={onClick}
     >
       <header className="card-course--image-header">
@@ -111,6 +112,7 @@ CardCourseImage.propTypes = {
   by: PropTypes.string,
   icon: PropTypes.string,
   onClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 export { CardCourse, CardCourseImage };
