@@ -1,7 +1,6 @@
 @import "../styles/main";
 
 * {
-
   &,
   &:after,
   &:before {
@@ -91,13 +90,13 @@ p {
       color: $logo;
     }
 
-    &>* {
+    & > * {
       flex-shrink: 0;
     }
   }
 }
 
-a.button{
+a.button {
   display: inline-flex;
   text-decoration: none;
 }
@@ -171,7 +170,7 @@ a.button{
     background: $white;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 
-    &>*+* {
+    & > * + * {
       margin-top: 16px;
     }
   }
@@ -258,7 +257,7 @@ a.button{
     height: 200px;
     position: relative;
 
-    &>*+* {
+    & > * + * {
       margin-top: 5px;
     }
   }
@@ -268,7 +267,7 @@ a.button{
     padding: 16px;
     border-radius: 0 0 4px 4px;
 
-    &>*+* {
+    & > * + * {
       margin-top: 10px;
     }
 
@@ -364,7 +363,7 @@ a.button{
     font-size: 14px;
     color: $drawer;
 
-    &>*+* {
+    & > * + * {
       margin-top: 10px;
     }
   }
@@ -443,7 +442,11 @@ a.button{
   $color-text: #333;
   $color-heading: #111;
 
-  @mixin responsive-text($desktop-size, $mobile-size, $line-height: $line-height-base) {
+  @mixin responsive-text(
+    $desktop-size,
+    $mobile-size,
+    $line-height: $line-height-base
+  ) {
     font-size: $desktop-size;
     line-height: $line-height;
 
@@ -532,6 +535,74 @@ a.button{
 
     .icon {
       font-size: 14px;
+    }
+  }
+}
+
+.weekly {
+  background-color: $white;
+  padding: 5px;
+
+  & > * + *{
+    margin-top: 8px;
+  }
+
+  .day{
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    display: inline-block;
+    //width: fit-content;
+    width: 35px;
+
+  &:hover{
+    .day-number{
+      border: 1px solid $sky;
+      background: rgba(45, 156, 219, 0.15);
+    }
+  }
+    &.active{
+      .day-number{
+        background: $sky;
+        color: $white;
+      }
+    }
+
+    &-title{
+      color: #828282;
+    }
+
+    &-number{
+      color: #333;
+      border-radius: 3px;
+      border: 1px solid transparent;
+    }
+  }
+
+  &-content{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-arrows{
+    display: flex;
+    gap: 10px;
+  }
+
+  &-arrow{
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    padding: 0;
+
+    .icon{
+      color: $logo;
     }
   }
 }
