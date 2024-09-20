@@ -13,9 +13,21 @@ const router = createBrowserRouter([
       // student
       {
         path: "student/dashboard",
-        element: <Pages.Student.Dashboard />
-      }
-    ]
+        element: <Pages.Student.Dashboard />,
+      },
+      {
+        path: "student/my-courses",
+        element: <Pages.Student.MyCourses />,
+      },
+      {
+        path: "student/my-courses/catalog",
+        element: <Pages.Student.Catalog />,
+      },
+      {
+        path: "student/my-courses/catalog/courses",
+        element: <Pages.Student.CoursesLists />,
+      },
+    ],
   },
 ]);
 

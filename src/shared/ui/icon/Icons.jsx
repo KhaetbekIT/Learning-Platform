@@ -24,10 +24,13 @@ import {
   MdFaceUnlock,
   MdOutlineSearch,
   MdPerson,
+  MdOutlineAppRegistration,
 } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
+import { CgProfile, CgTimelapse } from "react-icons/cg";
 import { FaTelegram } from "react-icons/fa";
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { IoGameControllerOutline } from "react-icons/io5";
 
 const Icons = ({ className, style, name }) => {
   switch (name) {
@@ -186,34 +189,59 @@ const Icons = ({ className, style, name }) => {
     }
     case "person": {
       return (
-        <MdPerson
-          className={classNames("icon", className)}
-          style={style}
-        />
+        <MdPerson className={classNames("icon", className)} style={style} />
       );
     }
     case "telegram": {
       return (
-        <FaTelegram
-          className={classNames("icon", className)}
-          style={style}
-        />
+        <FaTelegram className={classNames("icon", className)} style={style} />
       );
     }
     case "instagram": {
       return (
-        <FaInstagram
+        <FaInstagram className={classNames("icon", className)} style={style} />
+      );
+    }
+    case "youtube": {
+      return (
+        <FaYoutube className={classNames("icon", className)} style={style} />
+      );
+    }
+    case "arrow-drop-left": {
+      return (
+        <IoIosArrowDropleft
           className={classNames("icon", className)}
           style={style}
         />
       );
     }
-    case "youtube": {
+    case "arrow-drop-right": {
       return (
-        <FaYoutube
+        <IoIosArrowDropright
           className={classNames("icon", className)}
           style={style}
         />
+      );
+    }
+    case "app-registration": {
+      return (
+        <MdOutlineAppRegistration
+          className={classNames("icon", className)}
+          style={style}
+        />
+      );
+    }
+    case "controller": {
+      return (
+        <IoGameControllerOutline
+          className={classNames("icon", className)}
+          style={style}
+        />
+      );
+    }
+    case "timelapse": {
+      return (
+        <CgTimelapse className={classNames("icon", className)} style={style} />
       );
     }
     default: {
@@ -252,7 +280,12 @@ Icons.propTypes = {
     "person",
     "telegram",
     "instagram",
-    "youtube"
+    "youtube",
+    "arrow-drop-right",
+    "arrow-drop-left",
+    "app-registration",
+    "controller",
+    "timelapse",
   ]),
 };
 

@@ -13,6 +13,7 @@ import { Menu } from "./ui/menu/Menu.jsx";
 import { Typography } from "./ui/typography/Typography.jsx";
 import { Header } from "./ui/header/Header.jsx";
 import { CardPoint } from "./ui/card/Point.jsx";
+import { WeeklyCalendar } from "./ui/calendar/Calendar.jsx";
 
 const Shared = {
   Components: {
@@ -28,9 +29,10 @@ const Shared = {
     CardCourseImage,
     Menu,
     Typography,
-    CardPoint
+    CardPoint,
+    WeeklyCalendar,
   },
-  Layout: { Header }
+  Layout: { Header },
 };
 
 export default Shared;
