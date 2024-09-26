@@ -27,6 +27,10 @@ const router = createBrowserRouter([
         path: "student/my-courses/catalog/courses",
         element: <Pages.Student.CoursesLists />,
       },
+      {
+        path: "student/my-courses/catalog/details",
+        element: <Pages.Student.Details />,
+      },
     ],
   },
 ]);

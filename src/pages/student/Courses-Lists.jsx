@@ -10,13 +10,15 @@ export const CoursesLists = () => {
   const { search } = useLocation();
   const enrolledCourseId = useURLSearchParams(search, "enrolledCourse");
   const courses = useMemo(() => {
-    return EnrolledCourses.filter((item) => item.id == enrolledCourseId);
+    return EnrolledCourses.filter(
+      (item) => String(item.id) === enrolledCourseId,
+    );
   }, [EnrolledCourses]);
 
   const coursesItem = courses[0]?.lessons?.map((item, index) => (
     <li key={index}>
       <Link
-        to={`/Platform/student/my-courses/catalog/details/${item.id}`}
+        to={`/Platform/student/my-courses/catalog/details?detailId=${item.id}&catalogId=${courses[0].id}`}
         className={"inline-flex gap-5"}
       >
         <div className={"w-[90px] h-[90px] overflow-hidden rounded"}>

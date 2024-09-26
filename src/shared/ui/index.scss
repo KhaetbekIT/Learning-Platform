@@ -429,9 +429,10 @@ a.button {
 
   &-drawer {
     &-wrapper {
-      position: absolute;
+      position: fixed;
       left: 24px;
       bottom: 24px;
+      right: 24px;
     }
   }
 }

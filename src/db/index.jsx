@@ -63,11 +63,55 @@ export const EnrolledCourses = [
         id: 1,
         icon: "https://learn.microsoft.com/training/achievements/introduction-to-web-development-social.png",
         title: "Introduction",
+        links: [
+          { url: "https://www.figma.com", label: "Figma" },
+          { url: "https://www.figma.com", label: "Pixso" },
+        ],
+        videos: [
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+        ],
+        details: "Markdown",
       },
       {
         id: 2,
         icon: "https://eurobyte.ru/img/articles/chto-takoe-html/image1.jpeg",
         title: "HTML - basic",
+        links: [
+          { url: "https://www.figma.com", label: "Figma" },
+          { url: "https://www.figma.com", label: "Pixso" },
+        ],
+        videos: [
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+        ],
+        details: "Markdown",
       },
     ],
   },
@@ -82,11 +126,55 @@ export const EnrolledCourses = [
         id: 1,
         icon: "https://learn.microsoft.com/training/achievements/introduction-to-web-development-social.png",
         title: "Introduction",
+        links: [
+          { url: "https://www.figma.com", label: "Figma" },
+          { url: "https://www.figma.com", label: "Pixso" },
+        ],
+        videos: [
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+        ],
+        details: "Markdown",
       },
       {
         id: 2,
         icon: "https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg",
         title: "Javascript - basic",
+        links: [
+          { url: "https://www.figma.com", label: "Figma" },
+          { url: "https://www.figma.com", label: "Pixso" },
+        ],
+        videos: [
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+          {
+            url: "https://www.youtube.com/",
+            label: "Video",
+            cover: "https://www.pornhub.com/icons/icon.png",
+          },
+        ],
+        details: "Markdown",
       },
     ],
   },
