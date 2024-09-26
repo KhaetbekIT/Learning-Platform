@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Badge } from "antd";
-import { NavLink, BrowserRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Button = ({
   children,
@@ -14,36 +14,37 @@ const Button = ({
   onBlur,
   active,
   badge,
-  to
+  to,
+  style,
 }) => {
-  return to ?
-    (
-      <NavLink
-        to={to}
-        className={classNames("button", active && "active", className)}
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onBlur={onBlur}
-      >
-        {icon}
-        {children && <span>{children}</span>}
-        {badge && <Badge color={active ? "#141a2f" : "#2d9cdb"} count={badge} />}
-      </NavLink>
-    ) : (
-      <button
-        type={htmlType}
-        className={classNames("button", active && "active", className)}
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onBlur={onBlur}
-      >
-        {icon}
-        {children && <span>{children}</span>}
-        {badge && <Badge color={active ? "#141a2f" : "#2d9cdb"} count={badge} />}
-      </button>
-    )
+  return to ? (
+    <NavLink
+      to={to}
+      className={classNames("button", active && "active", className)}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onBlur={onBlur}
+      style={style}
+    >
+      {icon}
+      {children && <span>{children}</span>}
+      {badge && <Badge color={active ? "#141a2f" : "#2d9cdb"} count={badge} />}
+    </NavLink>
+  ) : (
+    <button
+      type={htmlType}
+      className={classNames("button", active && "active", className)}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onBlur={onBlur}
+    >
+      {icon}
+      {children && <span>{children}</span>}
+      {badge && <Badge color={active ? "#141a2f" : "#2d9cdb"} count={badge} />}
+    </button>
+  );
 };
 
 Button.propTypes = {
@@ -56,7 +57,9 @@ Button.propTypes = {
   onMouseLeave: PropTypes.func,
   onBlur: PropTypes.func,
   badge: PropTypes.number,
-  to: PropTypes.string
+  to: PropTypes.string,
+  active: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 export { Button };
